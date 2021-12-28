@@ -131,6 +131,12 @@ You have to set these environment variables for cmake:
 - LIBTOMCRYPT_INCLUDE_DIR=C:\libtomcrypt\build\include
 - LIBTOMCRYPT_LIBRARY=C:\libtomcrypt\build\lib\tomcrypt.lib
 
+#### macOS
+
+Through [homebrew](https://brew.sh):
+
+`brew install libtomcrypt`
+
 ### curl
 
 #### Windows (example)
@@ -155,6 +161,12 @@ or
 ```
 apt-get install libcurl4-openssl-dev
 ```
+
+#### macOS
+
+Get CommandLineTools through `xcode-select`
+
+`xcode-select --install`
 
 ### boost
 
@@ -207,6 +219,12 @@ You can install boost with apt-get:
 apt-get install libboost-all-dev
 ```
 
+#### macOS
+
+Through [homebrew](https://brew.sh):
+
+`brew install boost`
+
 ### zlib
 
 #### Windows (example)
@@ -222,6 +240,12 @@ You can install zlib with apt-get:
 ```
 aptget install zlib1g-dev
 ```
+
+#### macOS
+
+Get CommandLineTools through `xcode-select`
+
+`xcode-select --install`
 
 ## build
 

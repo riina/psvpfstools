@@ -1,5 +1,8 @@
 cmake_minimum_required (VERSION 3.6.0)
 
+set(CXX_STANDARD 11)
+set(CXX_STANDARD_REQUIRED ON)
+
 set (PROJECT psvpfstools)
 project (${PROJECT})
 
@@ -7,6 +10,8 @@ if (MSVC)
    add_definitions (/W3)
    add_definitions(-D_SCL_SECURE_NO_WARNINGS)
 elseif (CMAKE_COMPILER_IS_GNUCXX)
+   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Wno-unknown-pragmas -fPIC")
+elseif(CMAKE_CXX_COMPILER_ID STREQUAL AppleClang)
    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Wno-unknown-pragmas -fPIC")
 else()
    message (FATAL_ERROR "Unknown compiler")
